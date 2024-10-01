@@ -3,8 +3,8 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
-      richBlack: "#101820",
-      ghostWhite: "#F8F8FF",
+      "black-color": "#101820",
+      "white-color": "#F8F8FF",
     },
     extend: {},
   },

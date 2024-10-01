@@ -18,12 +18,12 @@ const Navbar = () => {
 
           <div className={`absolute left-0 right-0 top-16 shadow-md md:static md:flex md:items-center md:space-x-2 ${isMenuOpen ? "block" : "hidden"}`}>
             <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
-              <select className="border border-richBlack rounded-md px-4 py-2 w-full md:w-72">
-                <option className="bg-richBlack text-ghostWhite">Select Location</option>
-                <option className="bg-richBlack text-ghostWhite">New York</option>
-                <option className="bg-richBlack text-ghostWhite">Los Angeles</option>
-                <option className="bg-richBlack text-ghostWhite">San Francisco</option>
-                <option className="bg-richBlack text-ghostWhite">Chicago</option>
+              <select className="border border-black-color rounded-md px-4 py-2 w-full md:w-72">
+                <option className="bg-black-color text-white-color">Select Location</option>
+                <option className="bg-black-color text-white-color">New York</option>
+                <option className="bg-black-color text-white-color">Los Angeles</option>
+                <option className="bg-black-color text-white-color">San Francisco</option>
+                <option className="bg-black-color text-white-color">Chicago</option>
               </select>
 
               <div className="relative w-full md:w-[400px] lg:w-[600px]">
@@ -35,15 +35,17 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <button className="bg-richBlack text-ghostWhite px-4 py-2 rounded-md hover:bg-blue-700 w-[80px] font-semibold">Login</button>
-          <button className="border border-richBlack text-richBlack hover:bg-richBlack hover:text-ghostWhite transition-all ease-in-out duration-300 delay-100 px-4 py-2 rounded-md hover:bg-blue-50 w-[80px] font-semibold">Sell</button>
+          <button className="bg-black-color text-white-color px-4 py-2 rounded-md hover:bg-blue-700 w-[80px] font-semibold">Login</button>
+          <button className="border border-black-color text-black-color hover:bg-black-color hover:text-white-color transition-all ease-in-out duration-300 delay-100 px-4 py-2 rounded-md hover:bg-blue-50 w-[80px] font-semibold">Sell</button>
         </div>
       </div>
 
       {isMenuOpen && (
         <div className="md:hidden flex justify-center space-x-4 py-3">
-          <button className="bg-[#101820] text-[#F8F8FF] px-4 py-2 rounded-md hover:bg-blue-700 w-[80px]">Login</button>
-          <button className="border border-[#101820] text-[#101820] px-4 py-2 rounded-md hover:bg-blue-50 w-[80px]">Sell</button>
+          <Link to={"/login"} className="bg-black-color text-white-color px-4 py-2 rounded-md hover:bg-blue-700 w-[80px]">
+            Login
+          </Link>
+          <button className="border border-[#101820] text-black-color hover:bg-black-color hover:text-white-color transition ease-in-out delay-150 px-4 py-2 rounded-md hover:bg-blue-50 w-[80px]">Sell</button>
         </div>
       )}
     </nav>
