@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as Yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { FileField, InputField, PasswordField, RadioField, SelectField, TextAreaField } from "../components/subComponents/FormComponents";
+import { InputField, PasswordField, RadioField, TextAreaField } from "../components/subComponents/FormComponents";
 import { Link } from "react-router-dom";
 
 const App = () => {
@@ -17,7 +17,6 @@ const App = () => {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password")], "Passwords must match")
       .required("Confirm password is required."),
-
     gender: Yup.string()
       .matches(/^(male|female|others)$/, "Invalid gender")
       .required("Gender is required."),
@@ -45,8 +44,8 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full p-2">
-      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-gray-100 shadow-md rounded-lg p-6">
+    <div className="flex flex-col justify-center items-center w-full p-2 py-4 overflow-hidden">
+      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-gray-100 shadow-md shadow-[#1e1e1e] h-fit rounded-lg p-6">
         <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">Create an Account</h1>
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-2">
@@ -72,10 +71,10 @@ const App = () => {
           />
           <InputField label="Phone" name="phone" type="tel" placeholder={"Enter phone number"} control={control} errorMsg={errors?.phone?.message} />
           <TextAreaField label="Address" name="address" placeholder={"Enter address"} control={control} errorMsg={errors?.address?.message} />
-          <FileField label="Profile" name="profile" control={control} errorMsg={errors?.profile?.message} />
+          {/* <FileField label="Profile" name="profile" control={control} errorMsg={errors?.profile?.message} /> */}
         </div>
 
-        <button type="submit" className="mt-6 w-full py-3 bg-black-color text-white-color rounded-md font-semibold hover:bg-orange-600 transition-all">
+        <button type="submit" className="mt-6 w-full py-3 bg-[#101820] text-[#F8F8FF] rounded-md font-semibold hover:bg-orange-600 transition-all">
           Register
         </button>
 

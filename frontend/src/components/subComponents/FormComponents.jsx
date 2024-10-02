@@ -83,7 +83,7 @@ export const RadioField = ({ label, name, control, errorMsg, options }) => {
               type="radio"
               value={option.value}
               className={`radio radio-xs me-1 
-            ${option.value === "male" ? "radio-primary" : option.value === "female" ? "radio-secondary" : "radio border-black"}`}
+            ${option.value === "male" ? "radio-primary" : option.value === "female" ? "radio-secondary" : "radio border border-black"}`}
             />
             {option.label}
           </label>
@@ -110,21 +110,21 @@ export const TextAreaField = ({ label, name, control, errorMsg, placeholder }) =
   );
 };
 
-export const FileField = ({ label, name, control, errorMsg }) => {
-  const { field } = useController({
-    control: control,
-    name: name,
-  });
-  return (
-    <div>
-      <label htmlFor={name} className="block text-sm font-medium text-gray-700 mb-1">
-        {label}
-      </label>
-      <input {...field} id={name} type="file" className={`w-full px-3 py-2 border ${errorMsg ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:border-blue-500`} />
-      {errorMsg && <ErrorMsg message={errorMsg} />}
-    </div>
-  );
-};
+// export const FileField = ({ label, name, control, errorMsg }) => {
+//   const { field } = useController({
+//     control: control,
+//     name: name,
+//   });
+//   return (
+//     <div>
+//       <label htmlFor={name} className="block text-sm font-medium text-gray-700 mb-1">
+//         {label}
+//       </label>
+//       <input {...field} id={name} type="file" className={`w-full px-3 py-2 border ${errorMsg ? "border-red-500" : "border-gray-300"} rounded-md focus:outline-none focus:border-blue-500`} />
+//       {errorMsg && <ErrorMsg message={errorMsg} />}
+//     </div>
+//   );
+// };
 
 export const ErrorMsg = ({ message }) => (
   <span className="text-red-500 text-sm flex items-center mt-1">
