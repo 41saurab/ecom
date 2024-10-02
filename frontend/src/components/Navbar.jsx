@@ -12,7 +12,7 @@ const Navbar = () => {
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-gray-600 ">
             <FaBars />
           </button>
-          <Link to="/" className="text-xl md:text-2xl font-bold text-blue-600 me-6">
+          <Link to={"/"} className="text-xl md:text-2xl font-bold text-blue-600 me-6">
             Logo
           </Link>
 
@@ -35,7 +35,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <button className="bg-black-color text-white-color px-4 py-2 rounded-md hover:bg-blue-700 w-[80px] font-semibold">Login</button>
+          <Link to={"/login"} className="bg-black-color text-white-color px-4 py-2 rounded-md hover:bg-blue-700 w-[80px] font-semibold">
+            Login
+          </Link>
           <button className="border border-black-color text-black-color hover:bg-black-color hover:text-white-color transition-all ease-in-out duration-300 delay-100 px-4 py-2 rounded-md hover:bg-blue-50 w-[80px] font-semibold">Sell</button>
         </div>
       </div>
