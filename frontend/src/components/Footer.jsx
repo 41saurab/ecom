@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
   
         {/* Copyright sectio */}
-        <div className="col-span-3 mt-5 text-center bg-dark text-light py-2">
+        <div className="col-span-3 mt-5 text-center bg-black-color text-white-color py-2">
           <p className="font-bold">Copyright © {new Date().getFullYear()}</p>
           <p>All Rights Reserved by ACME Industries Ltd.</p>
         </div>
