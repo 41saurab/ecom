@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className=" bg-base-200">
-      <div className="footer text-base-content mt-5 p-10 grid grid-cols-4 gap-3">
+      <div className="footer text-base-content mt-5 p-10 grid grid-cols-4 gap-3 justify-items-center">
         <aside>
           <svg
             width="50"
@@ -18,7 +18,7 @@ const Footer = () => {
         </aside>
 
         <nav>
-          <h6 className="footer-title">Contacts</h6>
+          <h6 className="footer-title text-xl ">Contacts</h6>
           <a className="link link-hover">xyz@gmail.com</a>
           <a className="link link-hover">+977 98XXXXXXX</a>
           <a className="link link-hover">Sunsari, Nepal</a>
@@ -26,9 +26,9 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title">Company</h6>
-          <a className="link link-hover">
-            <a href="./about">About Us</a>
+          <h6 className="footer-title text-xl ">Company</h6>
+          <a className="link link-hover " href="./about">
+            About Us
           </a>
           <a className="link link-hover">Privacy Policy</a>
           <a className="link link-hover">Terms and Conditions</a>
@@ -36,13 +36,13 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title">Social</h6>
+          <h6 className="footer-title text-xl ">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="36"
+                height="36"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >
@@ -52,8 +52,8 @@ const Footer = () => {
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="36"
+                height="36"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >
@@ -63,8 +63,8 @@ const Footer = () => {
             <a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="36"
+                height="36"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >
