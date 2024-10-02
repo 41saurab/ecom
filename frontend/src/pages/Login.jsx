@@ -28,15 +28,14 @@ const Login = () => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full p-2 h-[80vh]">
-      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-gray-100 shadow-md rounded-lg p-6">
+      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-gray-100 shadow-md shadow-[#1e1e1e] h-fit rounded-lg p-6">
         <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">Create an Account</h1>
         <div className="space-y-3">
           <InputField label="Email" name="email" type="email" control={control} placeholder={"Enter email address"} errorMsg={errors?.email?.message} />
-
           <PasswordField label="Password" name="password" control={control} placeholder={"Enter password"} errorMsg={errors?.password?.message} showPassword={showPassword} togglePasswordVisibility={togglePasswordVisibility} />
         </div>
 
-        <button type="submit" className="mt-6 w-full py-3 bg-black-color text-white-color rounded-md font-semibold transition-all">
+        <button type="submit" className="mt-6 w-full py-3 bg-[#101820] text-[#F8F8FF] rounded-md font-semibold transition-all">
           Login
         </button>
 
