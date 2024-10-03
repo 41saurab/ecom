@@ -10,7 +10,7 @@ const Footer = () => {
         </aside>
 
         <nav>
-          <h6 className="footer-title text-xl text-[#000000] ">Contacts</h6>
+          <h6 className="footer-title text-xl text-dark ">Contacts</h6>
           <a className="link link-hover">xyz@gmail.com</a>
           <a className="link link-hover">+977 98XXXXXXX</a>
           <a className="link link-hover">Sunsari, Nepal</a>
@@ -18,7 +18,7 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title text-xl text-[#000000]">Company</h6>
+          <h6 className="footer-title text-xl text-dark">Company</h6>
           <a className="link link-hover " href="./about">
             About Us
           </a>
@@ -28,7 +28,7 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title text-xl text-[#000000]">Social</h6>
+          <h6 className="footer-title text-xl text-dark">Social</h6>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" className="fill-current">
