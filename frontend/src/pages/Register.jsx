@@ -44,8 +44,8 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full p-2 py-4 overflow-hidden">
-      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-gray-100 shadow-md shadow-[#1e1e1e] h-fit rounded-lg p-6">
+    <div className="flex flex-col justify-center items-center w-full p-2 py-6 overflow-hidden">
+      <form onSubmit={handleSubmit(submitRegistration)} className="w-full max-w-lg bg-light-gray shadow-md shadow-[#1e1e1e] h-fit rounded-lg p-6">
         <h1 className="text-center text-2xl font-bold text-gray-800 mb-2">Create an Account</h1>
         <div className="space-y-3">
           <div className="grid grid-cols-2 gap-2">
@@ -74,7 +74,7 @@ const App = () => {
           {/* <FileField label="Profile" name="profile" control={control} errorMsg={errors?.profile?.message} /> */}
         </div>
 
-        <button type="submit" className="mt-6 w-full py-3 bg-[#101820] text-[#F8F8FF] rounded-md font-semibold hover:bg-orange-600 transition-all">
+        <button type="submit" className="mt-6 w-full py-3 bg-dark text-light rounded-md font-semibold hover:bg-orange-600 transition-all">
           Register
         </button>
 
