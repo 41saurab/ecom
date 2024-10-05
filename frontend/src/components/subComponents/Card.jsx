@@ -1,5 +1,7 @@
+// Importing products from the resources
 import React from "react";
-import items from "../../item.json"; // Adjust the path as needed
+import { products } from "../../resources/product"; // Ensure the path is correct
+
 
 const Card = ({ item }) => {
   return (
@@ -21,12 +23,15 @@ const Card = ({ item }) => {
 
       <div className="card-body p-3">
         <div className="flex justify-between">
-          <h2 className="font-bold text-2xl">{item.price}</h2> {/* Use dynamic price */}
-          <div className="badge bg-dark text-light">{item.new ? "NEW" : ""}</div>
+          <h2 className="font-bold text-2xl">{item.price}</h2>{" "}
+          {/* Use dynamic price */}
+          {/* You can remove the badge if you don't have a 'new' property in your product objects */}
+          {/* <div className="badge bg-dark text-light">{item.new ? "NEW" : ""}</div> */}
         </div>
-        <p className="font-semibold text-lg">{item.name}</p> {/* Use dynamic name */}
-        <p className="text-dark">{item.location}</p> {/* Use dynamic location */}
-
+        <p className="font-semibold text-lg">{item.name}</p>{" "}
+        {/* Use dynamic name */}
+        <p className="text-dark">{item.location}</p>{" "}
+        {/* Use dynamic location */}
         <span className="text-sm text-gray-500 flex justify-end">
           {item.date} {/* Use dynamic date */}
         </span>
@@ -37,9 +42,11 @@ const Card = ({ item }) => {
 
 const ItemList = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-      {items.map((item) => (
-        <Card key={item.id} item={item} /> // Pass the item as props to Card
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+      {products.map((item) => (
+        <Card key={item.id} item={item} />
+
       ))}
     </div>
   );
