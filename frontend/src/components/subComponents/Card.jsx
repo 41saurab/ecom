@@ -2,6 +2,7 @@
 import React from "react";
 import { products } from "../../resources/product"; // Ensure the path is correct
 
+
 const Card = ({ item }) => {
   return (
     <div className="card bg-base-100 w-64 shadow-xl relative rounded-lg transform transition-transform hover:scale-105">
@@ -41,9 +42,11 @@ const Card = ({ item }) => {
 
 const ItemList = () => {
   return (
+
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
       {products.map((item) => (
         <Card key={item.id} item={item} />
+
       ))}
     </div>
   );
