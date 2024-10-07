@@ -10,9 +10,9 @@ import axios from "axios";
 
 const App = () => {
   const registerDTO = Yup.object({
-    fullName: Yup.string().min(2, "Name must contain at least 2 characters.").max(50).required("Full name is required."),
-    email: Yup.string().email("Invalid email address").required("Email is required."),
-    password: Yup.string().min(6, "Password must be at least 6 characters.").max(25).required("Password is required."),
+    fullName: Yup.string().min(3, "Name must contain at least 2 characters.").max(30).required("Full name is required."),
+    email: Yup.string().email("Invalid email address.").required("Email is required."),
+    password: Yup.string().min(8, "Password must be at least 8 characters.").max(32).required("Password is required."),
     gender: Yup.string()
       .matches(/^(male|female|others)$/, "Invalid gender")
       .required("Gender is required."),
