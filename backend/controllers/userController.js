@@ -27,27 +27,6 @@ export const register = catchAsyncErrors(async (req, res, next) => {
   }
 });
 
-// export const login = catchAsyncErrors(async (req, res, next) => {
-//     const { email, password, role } = req.body;
-
-//     if (!role || !email || !password) {
-//       return next(new ErrorHandler("All Fields Are Required.", 400));
-//     }
-//     const user = await User.findOne({ email }).select("+password");
-//     if (!user) {
-//       return next(new ErrorHandler("Invalid Email Or Password.", 400));
-//     }
-//     const isPasswordMatch = await user.comparePassword(password);
-//     if (!isPasswordMatch) {
-//       return next(new ErrorHandler("Invalid Email Or Password.", 400));
-//     }
-//     if (user.role !== role) {
-//       return next(new ErrorHandler("Invalid Role.", 400));
-//     }
-
-//     sendToken(user, 200, res, "User Logged In Successfully.");
-//   });
-
 export const login = catchAsyncErrors(async (req, res, next) => {
   const { email, password } = req.body;
   if (!email || !password) {
@@ -62,4 +41,12 @@ export const login = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Invalid Email or Password.", 400));
   }
   sendToken(user, 200, res, "User Logged In Successfully.");
+});
+
+export const fetchUsers = catchAsyncErrors(async (req, res, next) => {
+  const user = req.user;
+  res.status(200).json({
+    success: true,
+    user,
+  });
 });
